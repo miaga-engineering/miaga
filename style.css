@@ -1,0 +1,277 @@
+
+/* Basic resets and fonts */
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Raleway', sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  color: #444;
+  line-height: 1.4;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Layout: Two columns */
+.container {
+  display: flex; 
+  flex-direction: row; 
+  max-width: 1200px; 
+  margin: 20px auto; 
+  background-color: #fff;
+}
+.left-column {
+  width: 30%; 
+  padding: 20px; 
+  background-color: #fafafa;
+}
+.right-column {
+  width: 70%; 
+  padding: 20px;
+}
+/* Header / Title block */
+.header-block {
+  background-color: #464646; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 30px 10px;
+  margin-bottom: 20px;
+}
+.header-block h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.header-block .subtitle {
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+/* Section headings */
+.section-title {
+  font-size: 1.3em; 
+  text-transform: uppercase; 
+  color: #464646;
+  border-bottom: 2px solid #0064c8;
+  margin: 1.2em 0 0.5em 0;
+  font-weight: 600;
+}
+/* Contact / Info blocks */
+.contact-item {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.contact-item i {
+  margin-right: 8px;
+  color: #0064c8;
+}
+/* Skills / Skill Bars */
+
+.skill-header {
+  padding: 0.5em;
+  background-color: #f7f7f7;
+  /*display: flex;*/
+  align-items: center;
+  /*display: inline-block;
+  white-space: nowrap; /* Prevent wrapping */
+}
+.skill-header.clickable {
+  cursor: pointer;
+}
+
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  padding: 1em;
+}
+
+.category-container {
+  margin-bottom: 2em;
+}
+
+.expand-cat {
+  font-size: 0.75em;
+  font-weight: normal;
+  cursor: pointer;
+  margin-left: auto;
+  color: #0064c8;
+}
+
+.expand-skill {
+  font-size: 0.75em;       /* Smaller, more delicate text */
+  font-weight: normal;     /* Lighter weight */
+  margin-left: auto;       /* Space between the skill name and the marker */
+  color: #0064c8;          /* Example color, adjust as needed */
+  cursor: pointer;
+}
+
+.skill-item {
+  margin-bottom: 12px;
+}
+.skill-item .skill-name {
+  font-weight: 600;
+}
+.skill-bar {
+  background-color: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 6px;
+  margin-top: 4px;
+  position: relative; 
+}
+.skill-bar-fill {
+  background-color: #0064c8;
+  height: 6px;
+  width: 50%; /* default; will be overridden inline */
+  transition: width 0.4s ease;
+}
+
+.skill-level-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.expand-skill {
+  margin-left: auto;
+  font-size: 0.75em;
+  color: #0064c8;
+  cursor: pointer;
+}
+
+.skill-name, .expand-marker {
+  display: inline; /* Or inline-block if you need to apply margins/paddings */
+}
+/* Container for sub-skill bars */
+.sub-skills-container {
+  margin-top: 0.5em;
+  padding-left: 1em;
+  border-left: 2px dashed #ccc;
+}
+
+/* Each sub-skill item */
+.sub-skill-item {
+  margin: 0.5em 0;
+}
+
+/* Sub-skill name styling */
+.sub-skill-name {
+  font-size: 0.9em;
+  margin-bottom: 0.2em;
+  font-style: italic;
+}
+
+.sub-skill-item .skill-bar-fill {
+  background-color: rgba(0, 100, 200, 0.7); /* 70% opaque */
+}
+
+/* CV Event / Experience blocks */
+.cvevent {
+  margin-bottom: 20px;
+}
+.cvevent-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: baseline;
+}
+.cvevent-header .position {
+  font-weight: 700; 
+  font-size: 1em;
+  color: #333;
+}
+.cvevent-header .timeframe {
+  background-color: #0064c8; 
+  color: #fff;
+  font-size: 0.9em;
+  padding: 2px 8px; 
+  border-radius: 3px;
+}
+.cvevent-company {
+  color: #0064c8;
+  font-weight: 600;
+  margin-top: 4px;
+}
+.cvevent-description {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+.cvevent ul {
+  list-style: disc inside;
+  margin-left: 20px;
+  margin-top: 6px;
+}
+/* Education / Meta events */
+.meta-event {
+  margin-bottom: 16px;
+}
+.meta-title {
+  color: #0064c8;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.meta-subtitle {
+  font-weight: 600; 
+  color: #444;
+  margin-bottom: 2px;
+}
+.meta-institution {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 4px;
+}
+.meta-description {
+  font-size: 0.9em;
+  color: #333;
+}
+/* Utility classes */
+.spacer { margin-top: 20px; }
+.small-spacer { margin-top: 10px; }
+/* An example icon usage – you can replace i tags with <img> or FontAwesome */
+.fa {
+  font-style: normal; /* dummy for demonstration only */
+  color: #0064c8;
+  margin-right: 6px;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary::marker {
+  display: none;
+}
+details summary::before {
+  content: "+";
+  position: absolute;
+  left: -1.2em;
+  font-weight: bold;
+  color: #0064c8;
+}
+details[open] summary::before {
+  content: "-";
+}
+details p {
+  margin-left: 2em;
+  color: green;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important; /* for WebKit-based browsers */
+    print-color-adjust: exact !important;         /* for Firefox */
+  }
+}
