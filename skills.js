@@ -1,225 +1,208 @@
 // skills.js
-
+function getExperienceYears() {
+  // March 1, 2005 (months are 0-indexed, so 2 means March)
+  const startDate = new Date(2005, 2, 1);
+  const now = new Date();
+  let yearsDiff = now.getFullYear() - startDate.getFullYear();
+  
+  // Adjust if the current date hasn't reached the anniversary date yet
+  if (
+    now.getMonth() < startDate.getMonth() || 
+    (now.getMonth() === startDate.getMonth() && now.getDate() < startDate.getDate())
+  ) {
+    yearsDiff--;
+  }
+  
+  return yearsDiff;
+}
 // Define an array of categories. Each category has a name and a list of skills.
 // Every skill object now includes a subSkills array.
 const skillCategories = [
-    {
-      category: 'Business',
-      skills: [
-        {
-          name: 'Oil and Gas',
-          percentage: 76,
-          subSkills: [
-            { name: 'Automation', percentage: 100 },
-            { name: 'Production', percentage: 80 },
-            { name: 'FPSO', percentage: 80 },
-            { name: 'Functional Safety', percentage: 70 },
-            { name: 'Exploration', percentage: 50 }
-            
-          ]
-        },
-        {
-          name: 'Power and Utilities',
-          percentage: 100,
-          subSkills: [
-            { name: 'Generation', percentage: 95 },
-            { name: 'Distribution', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Petrochemical (5+ yrs)',
-          percentage: 80,
-          subSkills: [
-            { name: 'Process Optimization', percentage: 75 },
-            { name: 'Quality Control', percentage: 70 }
-          ]
-        },
-        {
-          name: 'Software Development (5+ yrs)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Front-end', percentage: 90 },
-            { name: 'Back-end', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Crypto/Fintech (5+ yrs)',
-          percentage: 20,
-          subSkills: [
-            { name: 'Blockchain', percentage: 25 },
-            { name: 'Smart Contracts', percentage: 20 }
-          ]
-        },
-        {
-          name: 'Electric Vehicles (5+ yrs)',
-          percentage: 25,
-          subSkills: [
-            { name: 'Battery Management', percentage: 30 },
-            { name: 'Powertrain', percentage: 20 }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Technical Skills',
-      skills: [
-        {
-          name: 'Optimal Process Control',
-          percentage: 100,
-          subSkills: [
-            { name: 'Modeling', percentage: 95 },
-            { name: 'Simulation', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Functional Safety',
-          percentage: 100,
-          subSkills: [
-            { name: 'Risk Analysis', percentage: 95 },
-            { name: 'Standards Compliance', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Optimization',
-          percentage: 100,
-          subSkills: [
-            { name: 'Algorithm Design', percentage: 90 },
-            { name: 'Performance Tuning', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Non-Linear MPC',
-          percentage: 100,
-          subSkills: [
-            { name: 'Predictive Modeling', percentage: 90 },
-            { name: 'Real-Time Control', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Python (scipy/numpy/pandas)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Data Analysis', percentage: 95 },
-            { name: 'Scientific Computing', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Python (statsmodels)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Statistical Modeling', percentage: 90 },
-            { name: 'Forecasting', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Python data viz (plotly/seaborn)',
-          percentage: 20,
-          subSkills: [
-            { name: 'Dashboarding', percentage: 25 },
-            { name: 'Data Storytelling', percentage: 20 }
-          ]
-        },
-        {
-          name: 'Python (sklearn/keras)',
-          percentage: 40,
-          subSkills: [
-            { name: 'Machine Learning', percentage: 45 },
-            { name: 'Deep Learning', percentage: 40 }
-          ]
-        },
-        {
-          name: 'SQL',
-          percentage: 60,
-          subSkills: [
-            { name: 'Query Optimization', percentage: 65 },
-            { name: 'Database Design', percentage: 60 }
-          ]
-        }
-      ]
-    },
-    {
-      category: 'Management Skills',
-      skills: [
-        {
-          name: 'Project Planning (5+ yrs)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Scheduling', percentage: 95 },
-            { name: 'Resource Allocation', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Change Mgmt (5+ yrs)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Stakeholder Engagement', percentage: 90 },
-            { name: 'Risk Mitigation', percentage: 85 }
-          ]
-        },
-        {
-          name: 'Configuration Mgmt (5+ yrs)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Version Control', percentage: 95 },
-            { name: 'Documentation', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Project Coordination (5+ yrs)',
-          percentage: 100,
-          subSkills: [
-            { name: 'Team Communication', percentage: 95 },
-            { name: 'Meeting Facilitation', percentage: 90 }
-          ]
-        },
-        {
-          name: 'Project Mgmt (5+ yrs)',
-          percentage: 80,
-          subSkills: [
-            { name: 'Budgeting', percentage: 75 },
-            { name: 'Risk Management', percentage: 70 }
-          ]
-        },
-        {
-          name: 'Functional Safety Mgmt (5+ yrs)',
-          percentage: 60,
-          subSkills: [
-            { name: 'Compliance', percentage: 65 },
-            { name: 'Training', percentage: 60 }
-          ]
-        },
-        {
-          name: 'Risk Mgmt (5+ yrs)',
-          percentage: 60,
-          subSkills: [
-            { name: 'Risk Assessment', percentage: 65 },
-            { name: 'Mitigation Strategies', percentage: 60 }
-          ]
-        },
-        {
-          name: 'Legal/Contract Mgmt (5+ yrs)',
-          percentage: 60,
-          subSkills: [
-            { name: 'Contract Negotiation', percentage: 65 },
-            { name: 'Compliance', percentage: 60 }
-          ]
-        },
-        {
-          name: 'Cost Mgmt (5+ yrs)',
-          percentage: 60,
-          subSkills: [
-            { name: 'Budget Tracking', percentage: 65 },
-            { name: 'Cost Optimization', percentage: 60 }
-          ]
-        }
-      ]
-    }
-  ];
+  {
+    category: 'Industry',
+    skills: [
+      {
+        name: 'Oil and Gas',
+        percentage: 76,
+        description: 'Experience from Oil and Gas Industry and levels of expertise',
+        subSkills: [
+          { name: 'ABB AS', percentage: 100 },
+          { name: 'Schlumberger', percentage: 60 }     
+        ]
+      },
+      {
+        name: 'Power and Utilities',
+        percentage: 80,
+        description: 'Experience from Power Industry and levels of expertise',
+        subSkills: [
+          { name: 'ABB AS', percentage: 90 }
+      
+        ]
+      },
+      {
+        name: 'Petrochemical and Chemical',
+        percentage: 60,
+        description: 'Experience from Chemical Industry and levels of expertise',
+        subSkills: [
+          { name: 'Yara - Nitric Acid', percentage: 70 },
+          { name: 'Yara - Ammonia', percentage: 50 },
+          { name: 'Borealis - Poly Propylene', percentage: 80 },
+          { name: 'Borealis - Poly Ethylene', percentage: 70 },
+          
+        ]
+      },
+      {
+        name: 'Industrial Automation',
+        percentage: 100,
+        description: 'Experience from Automation Industry and levels of expertise',
+        subSkills: [
+          { name: 'Yara', percentage: 80 },
+          { name: 'Borealis', percentage: 80 },
+          { name: 'ABB AS', percentage: 100 },
+          { name: 'ÅF', percentage: 70 },
+        ]
+      },
+      {
+        name: 'Crypto/Fintech',
+        percentage: 50,
+        description: 'Experience from Fintech Industry and levels of expertise',
+        subSkills: [
+          { name: 'Ramp Network', percentage: 50 },
+        ]
+      },
+      {
+        name: 'Electric Vehicles',
+        percentage: 50,
+        description: 'Experience from Automotive Industry and levels of expertise',
+        subSkills: [
+          { name: 'NEVS', percentage: 50 }
+        ]
+      }
+    ]
+  },
+  {
+    category: 'Technical Skills',
+    skills: [
+      {
+        name: 'Process Control',
+        percentage: 80,
+        subSkills: [
+          { name: 'Modeling and Simulation (Yara/Borealis)', percentage: 80 },
+          { name: 'Real Time Optimization (Yara)', percentage: 80 },
+          { name: 'Model Predictive Control (Yara/Borealis)', percentage: 80 },
+          { name: 'Basic Process Control (ABB AS/ABB AB/Borealis)', percentage: 80 },
+          { name: 'Advanced Regulatory Control (Yara/Borealis)', percentage: 80 },
+        ]
+      },
+      {
+        name: 'Functional Safety',
+        percentage: 90,
+        subSkills: [
+          { name: 'Safety Instrumented Function (ABB AS)', percentage: 90 },
+          { name: 'IEC 61508/IEC 61511 (ABB AS)', percentage: 90 },
+          { name: 'Change and Configuation Management (ABB AS/NEVS)', percentage: 100 },
+          { name: 'ISO 26262 (NEVS)', percentage: 60 },
+          { name: 'SIL1-3 Application Develpment (ABB AB)', percentage: 90 },
+        ]
+      },
+      {
+        name: 'Programming Languages',
+        percentage: 70,
+        subSkills: [
+          { name: 'Python (Yara/Ramp/Borealis,NEVS)', percentage: 80 },
+          { name: 'Fortran (Borealis)', percentage:70},
+          { name: 'Sharepoint (NEVS/ABB AS)', percentage: 70},
+          { name: 'C# (NEVS)', percentage: 20},
+          { name: 'SQL (RAMP/Borealis)', percentage: 70},
+          { name: 'IEC 61131 (ABB AS/ABB AB)', percentage: 80},
+        ]
+      },
+      {
+        name: 'Python',
+        percentage: 80,
+        subSkills: [
+          { name: 'Data analysis Pandas (Yara)', percentage: 95 },
+          { name: 'Scientific Computing Scipy/CasADI (Yara/Borealis)', percentage: 70 },
+          { name: 'Machine Learning/AI PINNs Scikit-learn/PyTorch (Yara)', percentage: 30 },
+          { name: 'Data Visualization Plotly/Seaborn/Bokeh (Yara/Ramp)', percentage:80},
+          { name: 'Forecasting Prophet/Statsmodels/Statforecast (Ramp)', percentage: 50},
+          { name: 'Task Automation (Borealis)', percentage: 80 },
+          { name: 'Simulation and Control Scipy/CasADI/Gekko (Yara/Borealis)', percentage: 80 },
+        ]
+      },
+      {
+        name: 'Quality Assurance',
+        percentage: 95,
+        subSkills: [
+          { name: 'Automatic Testing (ABB AS/ABB AB)', percentage: 90 },
+          { name: 'Test Design (ABB AS/ABB AB)', percentage: 90 },
+          { name: 'Change and Configuation Management (ABB AS/NEVS)', percentage: 100 },
+
+        ]
+      },
+      
+     
+      
+    ]
+  },
+  {
+    category: 'Management Skills',
+    skills: [
+      {
+        name: 'Project Management',
+        percentage: 100,
+        description: 'Project Management skills and levels of expertise',
+        subSkills: [
+          { name: 'Scheduling (Yara/Borealis/ABB AS)', percentage: 95 },
+          { name: 'Resource Allocation (ABB AS)', percentage: 90 },
+          { name: 'Project Coordination (ABB AS)', percentage: 90 },
+          { name: 'Change Management (NEVS/ABB AS)', percentage: 90 },
+          { name: 'Contract Management (Borealis/ABB AS)', percentage: 90 },
+          { name: 'Risk Management (ABB AS)', percentage: 90 },
+        ]
+      },
+      
+      {
+        name: 'Configuration Management',
+        percentage: 100,
+        description: 'Configuation Management skills and levels of expertise',
+        subSkills: [
+          { name: 'Version Control', percentage: 95 },
+          { name: 'Documentation', percentage: 90 }
+        ]
+      },
+
+    
+      {
+        name: 'Functional Safety Management',
+        percentage: 60,
+        description: 'Functional Safety Management skills and levels of expertise',
+        subSkills: [
+          { name: 'Compliance', percentage: 65 },
+          { name: 'Procedures', percentage: 60 }
+        ]
+      }
+    
+
+    ]
+  }
+];
   
   // Wait until the DOM is fully loaded
   document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('skills-container');
-  
+    const tooltip = document.createElement('div');
+    tooltip.id = 'skill-tooltip';
+    tooltip.style.position = 'absolute';
+    tooltip.style.display = 'none';
+    tooltip.style.background = 'rgba(0, 0, 0, 0.7)';
+    tooltip.style.color = '#fff';
+    tooltip.style.padding = '5px 10px';
+    tooltip.style.borderRadius = '4px';
+    tooltip.style.fontSize = '12px';
+    tooltip.style.pointerEvents = 'none';
+    tooltip.style.zIndex = 1000;
+    document.body.appendChild(tooltip);
     // Loop through each category
     skillCategories.forEach(categoryObj => {
       // Create a container for this category (to group its title and skills)
@@ -229,7 +212,7 @@ const skillCategories = [
       // Create a section title container that will include the title and the expand/collapse control
       const sectionTitle = document.createElement('div');
       sectionTitle.className = 'section-title';
-      sectionTitle.textContent = categoryObj.category;
+      sectionTitle.textContent = categoryObj.category ;
   
       // Create an expand/collapse control element (initially showing [+])
       const expandCat = document.createElement('span');
@@ -273,6 +256,22 @@ const skillCategories = [
         skillName.textContent = skill.name;
         skillHeader.appendChild(skillName);
 
+        // **** HERE: Add tooltip event listeners to the skillHeader ****
+        skillHeader.addEventListener('mouseenter', function(event) {
+          // Set tooltip text to the skill's description (if provided)
+          tooltip.textContent = skill.description || 'No description available.';
+          tooltip.style.display = 'block';
+        });
+        skillHeader.addEventListener('mousemove', function(event) {
+          // Move the tooltip near the cursor
+          tooltip.style.left = event.pageX + 10 + 'px';
+          tooltip.style.top = event.pageY + 10 + 'px';
+        });
+        skillHeader.addEventListener('mouseleave', function() {
+          // Hide the tooltip when leaving
+          tooltip.style.display = 'none';
+        });
+      // **** End tooltip event listeners ****
       
         // Create and append the main progress bar
         const skillBar = document.createElement('div');
@@ -326,6 +325,8 @@ const skillCategories = [
             ? 'block' 
             : 'none';
         });
+
+       
   
         // Append the sub-skills container to the top-level skill container
         skillItem.appendChild(subSkillsContainer);

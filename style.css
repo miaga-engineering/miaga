@@ -114,7 +114,8 @@ a {
   margin-bottom: 12px;
 }
 .skill-item .skill-name {
-  font-weight: 600;
+  font-weight: 600; 
+  color: #464646; 
 }
 .skill-bar {
   background-color: #ddd;
@@ -147,6 +148,7 @@ a {
 
 .skill-name, .expand-marker {
   display: inline; /* Or inline-block if you need to apply margins/paddings */
+  color: #0064c8;
 }
 /* Container for sub-skill bars */
 .sub-skills-container {
@@ -255,7 +257,7 @@ details summary::marker {
 details summary::before {
   content: "+";
   position: absolute;
-  left: -1.2em;
+  left: -0em;
   font-weight: bold;
   color: #0064c8;
 }
@@ -266,12 +268,20 @@ details p {
   margin-left: 2em;
   color: green;
   font-style: italic;
-  margin-bottom: 1em;
+  margin-bottom: 0em;
 }
 
 @media print {
   * {
     -webkit-print-color-adjust: exact !important; /* for WebKit-based browsers */
     print-color-adjust: exact !important;         /* for Firefox */
+  }
+  .print-only {
+    display: block;
+  }
+}
+@media screen {
+  .print-only {
+    display: none;
   }
 }
