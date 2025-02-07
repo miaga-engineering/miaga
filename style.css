@@ -247,15 +247,18 @@ details summary {
   position: relative;
   padding-left: 1.5em;
   margin: 0.5em 0;
+  margin-bottom: 0em; 
 }
+
 details summary::-webkit-details-marker {
   display: none;
 }
+
 details summary::marker {
   display: none;
 }
 details summary::before {
-  content: "+";
+  content: '+';
   position: absolute;
   left: -0em;
   font-weight: bold;
@@ -266,22 +269,33 @@ details[open] summary::before {
 }
 details p {
   margin-left: 2em;
-  color: green;
+  color: rgb(68, 68, 68);
   font-style: italic;
-  margin-bottom: 0em;
+  margin-bottom: 1em;
+}
+details ul {
+  margin-left: 2.5em  !important;
+  font-style: italic;
 }
 
-@media print {
+/*@media print {
   * {
-    -webkit-print-color-adjust: exact !important; /* for WebKit-based browsers */
-    print-color-adjust: exact !important;         /* for Firefox */
+    -webkit-print-color-adjust: exact !important; 
+    print-color-adjust: exact !important;         
   }
   .print-only {
     display: block;
   }
+  .print-only .email {
+    display: inline !important;
+  }
+  .contact-item > div > a.email {
+    display: inline !important;
+  }
 }
+
 @media screen {
   .print-only {
     display: none;
   }
-}
+}*/
