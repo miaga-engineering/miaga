@@ -1,0 +1,45 @@
+{
+    "header": {
+      "name": "MICHAEL KWAPISZ",
+      "subtitle": "Versatile broad spectrum problem solver"
+    },
+    "contact": {
+      "address": "Rue D'Abeiche 9, 1420 Braine L'Alleud",
+      "phone": "+32 471 20 16 11",
+      "email": "michaelkwapisz@gmail.com"
+    },
+    "education": [
+      {
+        "date": "Aug 1999 - Dec 2004",
+        "degree": "M.Sc. in Engineering Physics",
+        "institution": "Lund University",
+        "description": "Earned a Master's in Engineering Physics (Automatic Control Theory & laser physics). Completed exchange programs at UNSW (Sydney) and INPG (Grenoble). Master Thesis on 'Control of an inverted pendulum using MPC' at EPFL."
+      }
+      
+    ],
+    "workExperience": [
+      {
+        "position": "Principal Engineer",
+        "timeframe": "Jan 23 - Present",
+        "company": "Yara",
+        "summary": "Advanced Process Control Engineer seeking to optimize production using statistical methods and model predictive control.",
+        "details": [
+          "Developing predictive models and MPC controllers",
+          "Identifying optimization opportunities",
+          "Calculating business benefits for proposed solutions",
+          "Statistical analysis of performance",
+          "Project and maintenance planning"
+        ],
+        "technologies": [
+          "Python (Scipy, sklearn, pandas)",
+          "Excel",
+          "PowerPoint",
+          "Visio"
+        ]
+      }
+     
+    ]
+  }
+  
+
+

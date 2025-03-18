@@ -9,6 +9,7 @@
 <body>
     <scipt src="main.js"></scipt>
     <script src="skills.js"></script>
+    <script src="cvevents.js"></script>
   <!-- Header / Title block -->
   <div class="header-block">
     <h1>MICHAEL KWAPISZ</h1>
@@ -31,11 +32,11 @@
         <div class="small-spacer"></div>
         <div class="contact-item">
           <i class="fa">&#x1F4CD;</i>  <!-- Just a placeholder icon -->
-          <div>Rue D'Abeiche 9, 1420 Braine L'Alleud</div>
+          <div>Belgium</div>
         </div>
         <div class="contact-item">
           <i class="fa">&#x1F4DE;</i>
-          <div>+32 471 20 16 11</div>
+          <div>+32 471 20 1x xx</div>
         </div>
 
         <div class="contact-item">
@@ -128,11 +129,11 @@
         </div>
         <div class="cvevent-company">Yara</div>
         <div class="cvevent-description">
-          <p>
+          <p class="cvevent-summary">
             <u><strong>Summary:</strong></u> Advanced Process Control Engineer seeking to optimize production mainly using statistical methods and model predictive control.
           </p>
           
-          <ul>
+          <ul class="summary-details">
             <details>
               <summary>Developing predictive models and MPC controllers</summary>
               <p>Developing predictive models and MPC controllers for Nitric acid and Ammonia plants. 
@@ -168,7 +169,7 @@
           </ul>
         </summary>
         </details>
-        <details>
+        <details class="technologies">
           <summary>
             <u><strong>Technologies:</strong></u> Python (Scipy, sklearn, pandas), Excel, PowerPoint, Visio.
           </summary>
@@ -192,27 +193,28 @@
         </div>
         <div class="cvevent-company">Ramp Network</div>
         <div class="cvevent-description">
-          <p>
+          <p class="cvevent-summary">
             <u><strong>Summary:</strong></u> Creating and transforming models, designing metrics, indices and created dashboards for data-driven decision-making.
           </p>
-            <ul>
+            <ul class="summary-details">
                 <details>
                     <summary>Led treasury forecasting initiatives (forecasting sales volumes, planning procurement to minimize costs)</summary> 
                     <p>Led treasury forecasting initiatives, specializing in forecasting sales volumes and strategically planning procurement from suppliers to minimize
                       costs. Executed data-driven analyses to optimize procurement strategies
-                      and enhance financial efficiency.</p>
-                    </details>
+                      and enhance financial efficiency. Treasury forecasting was done using Statsmodels, Statsforecast, Prophet and Keras/LSTM.</p>
+                </details>
                 <details>
                     <summary>Developed advanced RFM analysis for churn/retention</summary>
-                    <p>Created a more precise analysis than standard cohort analysis, which helped in identifying customer segments and improving retention strategies. New methodoly used statistical analysis to better understand individual clients behaviour. </p>
+                    <p>Created a more precise analysis than standard cohort analysis, which helped in identifying customer segments and improving retention strategies. 
+                      New methodoly used statistical analysis to better understand individual clients behaviour. Project was done using BIGQuery/DBT/SQL. </p>
                 </details>
                 <details>
                     <summary>Performed market analysis on KPIs vs. competitors</summary>
-                    <p>Introducing market indices to evaluate company's performance relative to general market growth. </p>
+                    <p>Introducing market indices to evaluate company's performance relative to general market growth. Done in SQL/Python. </p>
             
             </ul>
             <!--<p><strong>Technologies:</strong> Python (Statsmodels, Statsforecast, pmdarima, Keras, Prophet), Scipy, SQL (BigQuery, DBT), Data Studio, Looker</p>-->
-            <details>
+            <details class="technologies">
               <summary>
                 <u><strong>Technologies:</strong></u> Python (Statsmodels, Statsforecast, pmdarima, Keras, Prophet), Scipy, SQL (BigQuery, DBT), Data Studio, Looker
               </summary>
@@ -238,21 +240,49 @@
         </div>
         <div class="cvevent-company">Borealis</div>
         <div class="cvevent-description">
-          <p>
-            MPC engineer helping plants tune and design advanced controllers, focusing on non-linear MPC for process optimization.
+          <p class="cvevent-summary">
+            <u><strong>Summary:</strong></u> MPC engineer helping plants tune and design advanced controllers, focusing on non-linear MPC for process optimization.
           </p>
-          <ul>
-            <li>Designing, implementing, commissioning non-linear MPC for Polyolefin plants</li>
-            <li>Improving existing FORTRAN-based nonlinear MPC for better performance</li>
-            <li>System identification, PID loop tuning, advanced process control loops</li>
-            <li>Creating dashboards for controller performance monitoring</li>
+          <ul class="summary-details">
+            <details>
+              <summary>Developing, implementing, commissioning non-linear MPC for Polyolefin plants</summary>
+              <p>Developing Borealis's proprietary Model Predictive Controller(Onspot). 
+                Implementing controller for polypropylene plants and commissioning them.
+              </p>
+            </details>
+            <details>
+              <summary>Improving existing FORTRAN-based nonlinear MPC for better performance</summary>
+              <p>Executed a project to speed up Onspot by implementing parallelization, fortran openMP. 
+                This project involved external experts and was partly funded by the EU. 
+                The efforts resulted in a 30% speed up and was particularly important for LDPE(Low Density Poly-Ethylene) plants where models are relatively large.
+                Another use case was for simulating detail kinetics where execution time for one cycle could take 30 minutes.    
+              </p>
+            </details>
+            <details>
+              <summary>System identification, PID loop tuning, advanced process control loops</summary>
+              <p>Identifying simple systems using internal identification and tuning tools. Loop tuning using previously mentioned tools, 
+                Ensuring control loop performance and proper frequency separation to related control loops. 
+                Design of advanced regulatory controllers, everything more advanced than a cascade controller. 
+                One project was to implement an advanced filter which would compensate for control actuator dynamics and delays. Successfully managed to reduce temperature oscillations from 2°C to 0.15°C. 
+                This improvement allowed for improved stability of of the plant and resulted in 97% reduction in operator intervention, 
+                allowing them to pay attention to other parts of the plant.   
+              </p>
+            </details>
+            <details> 
+              <summary>Creating dashboards for controller performance monitoring</summary>
+              <p>Calculating "service factor" and other performance related metrics using SQL and present the statistics visually using Aspen tech suite.</p>
+            </details>
+            
           </ul>
-          <p><strong>Technologies:</strong> Fortran + OpenMP, Python (simulation, automation, SciPy, Keras), SQL, Matlab/Simulink</p>
-          <ul>
-            <li>Implemented parallel MPC to reduce execution time; expanded model complexity</li>
-            <li>Created Python framework for performance dashboards, cutting total project time significantly</li>
-            <li>Reduced temperature oscillations from 2°C to 0.15°C via advanced filters & improved control loop design</li>
-          </ul>
+          <details class="technologies">
+            <summary>
+              <u><strong>Technologies:</strong></u> Fortran + OpenMP, Python (simulation, automation, SciPy, Keras), SQL, Matlab/Simulink
+            </summary>
+            <ul><strong>Fortran</strong> Implemented parallelized MPC, using openMP(High Performance Computing) to reduce execution time which allowed for expansion of model complexity.</ul>
+            <ul><strong>Python</strong> Created Python framework for templating above mentioned implementation, cutting total project time significantly.</ul>
+            <ul><strong>Python</strong> Scipy, used for simulations of mainly heat loops in both loop reactors and Gas-Phase-Reactors.</ul>
+            
+          </details>
         </div>
       </div>
 
@@ -263,14 +293,33 @@
         </div>
         <div class="cvevent-company">NEVS</div>
         <div class="cvevent-description">
-          <ul>
-            <li>Provided holistic systems overview for EV design, plus functional safety management</li>
-            <li>Created simulator to calculate short-circuit hazards in vehicles</li>
-            <li>Coordinated departmental efforts to meet system requirements</li>
-            <li>Designed a SharePoint-based document handling system</li>
-            <li>Participated in Skunk-works innovation projects</li>
+          <p class="cvevent-summary">
+            <u><strong>Summary:</strong></u> Systems engineer & Functional safety management
+          </p>
+          <ul class="summary-details">
+            <details>
+              <summary>Systems engineer. Focusing on electrical safety.</summary>
+              <p>Provided holistic systems overview for EV design, focusing on electrical safety, system capacitance and impedance.
+                Coordinated departmental efforts to meet system requirements
+              </p>
+            </details>
+            <details>
+              <summary>Functional safety management. Coordination and designing a change handling system. </summary>
+              <p>Coordinated departmental efforts to meet system requirements. 
+                Created a C# program to calculate short-circuit hazards in vehicles based on variaty of research papers.
+                Designed a SharePoint-based document handling system.
+              </p>
+            </details>
+            <details> 
+              <summary>Skunk works, feasibility study of an idea. </summary>
+              <p>Did a feasibility study of a novel safety feature, that originated from the 60ies and involved rockets. 
+                An idea that already exists in military technology. </p>
+            </details>
+            
           </ul>
-          <p><strong>Technologies:</strong> SharePoint, C#/Excel, Python</p>
+          <details> 
+            <u><strong>Technologies:</strong> SharePoint, C#/Excel, Python</u>
+          </details>
         </div>
       </div>
 

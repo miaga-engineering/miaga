@@ -278,6 +278,12 @@ details ul {
   font-style: italic;
 }
 
+.toggle-indicator {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
 /*@media print {
   * {
     -webkit-print-color-adjust: exact !important; 
