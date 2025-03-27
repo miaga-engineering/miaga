@@ -7,7 +7,10 @@
   
 </head>
 <body>
-    <scipt src="main.js"></scipt>
+    <div class="theme-toggle">
+      <button id="themeToggle" aria-label="Toggle dark mode">🌓</button>
+    </div>
+    <script src="main.js"></script>
     <script src="skills.js"></script>
     <script src="cvevents.js"></script>
   <!-- Header / Title block -->
@@ -133,42 +136,42 @@
             <u><strong>Summary:</strong></u> Advanced Process Control Engineer seeking to optimize production mainly using statistical methods and model predictive control.
           </p>
           
-          <ul class="summary-details">
+          <div class="summary-details">
             <details>
               <summary>Developing predictive models and MPC controllers</summary>
-              <p>Developing predictive models and MPC controllers for Nitric acid and Ammonia plants. 
+              <p class="cv-details">Developing predictive models and MPC controllers for Nitric acid and Ammonia plants. 
                 By determining the most cost effective MV-CV relationships, 
-                to enable plant to be operated with optimized energy consumption and minimum waste. Work required three phases: 
-                <ul>Study process, through P&IDs and PFDs</ul>
-                <ul>Setting up control objectives.</ul>
-                <ul>Implement MPC.</ul>
-                </p>
+                to enable plant to be operated with optimized energy consumption and minimum waste. Work required three phases:
+                <ul class="cv-details">Study process, through P&IDs and PFDs.</ul>
+                <ul class="cv-details">Setting up control objectives.</ul>
+                <ul class="cv-details">Implement MPC.</ul>
+              </p>
             </details>  
             <details>
               <summary>Identifying optimization opportunities</summary>
-              <p>Through studying plant P&IDs and PFDs, and align them with operation objectives.      
+              <p class="cv-details">Through studying plant P&IDs and PFDs, and align them with operation objectives.      
               </p>
             </details>
             <details>
               <summary>Calculating business benefits for proposed solutions</summary>
-              <p>Similuating loop dynamics and calculating economic benefits of feasible APC solutions. </p>
+              <p class="cv-details">Similuating loop dynamics and calculating economic benefits of feasible APC solutions. </p>
             </details>
             <details>
               <summary>Statistical analysis of performance</summary>
-              <p>Performance analysis of APC implementations. 
+              <p class="cv-details">Performance analysis of APC implementations. 
                 Using Python scipy and statsmodels libraries. 
                 Analysis involded presenting and comparing Kernel Density Estimations using A/B testing methodology. 
               </p>
             </details>
             <details>
               <summary>Project and maintenance planning</summary>
-              <p>Overall planning of APC applications. 
+              <p class="cv-details">Overall planning of APC applications. 
                  Support plants conducting maintenance of APC applications.
               </p>
             </details>
-          </ul>
-        </summary>
-        </details>
+          </div>
+        <!--</summary>
+        </details>-->
         <details class="technologies">
           <summary>
             <u><strong>Technologies:</strong></u> Python (Scipy, sklearn, pandas), Excel, PowerPoint, Visio.
@@ -181,7 +184,7 @@
           <ul><strong>Visio</strong> for flow diagrams and process overview.</ul>
           <ul><strong>PowerPoint</strong> for presentations.</ul>
           <ul><strong>sklearn</strong> for machine learning used for business case calculations. </ul>
-          </ul>
+          
         </details>
         </div>
       </div>
@@ -196,23 +199,23 @@
           <p class="cvevent-summary">
             <u><strong>Summary:</strong></u> Creating and transforming models, designing metrics, indices and created dashboards for data-driven decision-making.
           </p>
-            <ul class="summary-details">
+            <div class="summary-details">
                 <details>
                     <summary>Led treasury forecasting initiatives (forecasting sales volumes, planning procurement to minimize costs)</summary> 
-                    <p>Led treasury forecasting initiatives, specializing in forecasting sales volumes and strategically planning procurement from suppliers to minimize
+                    <p class="cv-details">Led treasury forecasting initiatives, specializing in forecasting sales volumes and strategically planning procurement from suppliers to minimize
                       costs. Executed data-driven analyses to optimize procurement strategies
                       and enhance financial efficiency. Treasury forecasting was done using Statsmodels, Statsforecast, Prophet and Keras/LSTM.</p>
                 </details>
                 <details>
                     <summary>Developed advanced RFM analysis for churn/retention</summary>
-                    <p>Created a more precise analysis than standard cohort analysis, which helped in identifying customer segments and improving retention strategies. 
+                    <p class="cv-details">Created a more precise analysis than standard cohort analysis, which helped in identifying customer segments and improving retention strategies. 
                       New methodoly used statistical analysis to better understand individual clients behaviour. Project was done using BIGQuery/DBT/SQL. </p>
                 </details>
                 <details>
                     <summary>Performed market analysis on KPIs vs. competitors</summary>
-                    <p>Introducing market indices to evaluate company's performance relative to general market growth. Done in SQL/Python. </p>
+                    <p class="cv-details">Introducing market indices to evaluate company's performance relative to general market growth. Done in SQL/Python. </p>
             
-            </ul>
+                </div>
             <!--<p><strong>Technologies:</strong> Python (Statsmodels, Statsforecast, pmdarima, Keras, Prophet), Scipy, SQL (BigQuery, DBT), Data Studio, Looker</p>-->
             <details class="technologies">
               <summary>
@@ -221,7 +224,7 @@
               <ul><strong>Statsmodels</strong>, core statistical package for statistical analysis. </ul>
               <ul><strong>Statsforecast</strong>, similar to statsmodels but implemented using numba for increased performance.</ul>
               <ul><strong>pmdarima</strong>, package for finding optimal model complexity.</ul>
-              <ul><strong>Keras</strong>, TensorFLow AI package for Machine Learning and Deep learning.</ul>
+              <ul><strong>Keras</strong>, TensorFlow AI package for Machine Learning and Deep learning.</ul>
               <ul><strong>Prophet</strong>, package used for prediction of timeseries. </ul>
               <ul><strong>Scipy</strong>, package used for statistical analysis and modelling.</ul>
               <ul><strong>Google BigQuery</strong> for modelling.</ul>
@@ -243,16 +246,16 @@
           <p class="cvevent-summary">
             <u><strong>Summary:</strong></u> MPC engineer helping plants tune and design advanced controllers, focusing on non-linear MPC for process optimization.
           </p>
-          <ul class="summary-details">
+          <div class="summary-details">
             <details>
               <summary>Developing, implementing, commissioning non-linear MPC for Polyolefin plants</summary>
-              <p>Developing Borealis's proprietary Model Predictive Controller(Onspot). 
+              <p class="cv-details">Developing Borealis's proprietary Model Predictive Controller(Onspot). 
                 Implementing controller for polypropylene plants and commissioning them.
               </p>
             </details>
             <details>
               <summary>Improving existing FORTRAN-based nonlinear MPC for better performance</summary>
-              <p>Executed a project to speed up Onspot by implementing parallelization, fortran openMP. 
+              <p class="cv-details">Executed a project to speed up Onspot by implementing parallelization, fortran openMP. 
                 This project involved external experts and was partly funded by the EU. 
                 The efforts resulted in a 30% speed up and was particularly important for LDPE(Low Density Poly-Ethylene) plants where models are relatively large.
                 Another use case was for simulating detail kinetics where execution time for one cycle could take 30 minutes.    
@@ -260,7 +263,7 @@
             </details>
             <details>
               <summary>System identification, PID loop tuning, advanced process control loops</summary>
-              <p>Identifying simple systems using internal identification and tuning tools. Loop tuning using previously mentioned tools, 
+              <p class="cv-details">Identifying simple systems using internal identification and tuning tools. Loop tuning using previously mentioned tools, 
                 Ensuring control loop performance and proper frequency separation to related control loops. 
                 Design of advanced regulatory controllers, everything more advanced than a cascade controller. 
                 One project was to implement an advanced filter which would compensate for control actuator dynamics and delays. Successfully managed to reduce temperature oscillations from 2°C to 0.15°C. 
@@ -270,10 +273,10 @@
             </details>
             <details> 
               <summary>Creating dashboards for controller performance monitoring</summary>
-              <p>Calculating "service factor" and other performance related metrics using SQL and present the statistics visually using Aspen tech suite.</p>
+              <p class="cv-details">Calculating "service factor" and other performance related metrics using SQL and present the statistics visually using Aspen tech suite.</p>
             </details>
             
-          </ul>
+          </div>
           <details class="technologies">
             <summary>
               <u><strong>Technologies:</strong></u> Fortran + OpenMP, Python (simulation, automation, SciPy, Keras), SQL, Matlab/Simulink
@@ -281,7 +284,7 @@
             <ul><strong>Fortran</strong> Implemented parallelized MPC, using openMP(High Performance Computing) to reduce execution time which allowed for expansion of model complexity.</ul>
             <ul><strong>Python</strong> Created Python framework for templating above mentioned implementation, cutting total project time significantly.</ul>
             <ul><strong>Python</strong> Scipy, used for simulations of mainly heat loops in both loop reactors and Gas-Phase-Reactors.</ul>
-            
+            <ul><strong>Matlab</strong> Simuling, used for linear system simulations.</ul>
           </details>
         </div>
       </div>
@@ -296,29 +299,34 @@
           <p class="cvevent-summary">
             <u><strong>Summary:</strong></u> Systems engineer & Functional safety management
           </p>
-          <ul class="summary-details">
+          <div class="summary-details">
             <details>
               <summary>Systems engineer. Focusing on electrical safety.</summary>
-              <p>Provided holistic systems overview for EV design, focusing on electrical safety, system capacitance and impedance.
+              <p class="cv-details">Provided holistic systems overview for EV design, focusing on electrical safety, system capacitance and impedance.
                 Coordinated departmental efforts to meet system requirements
               </p>
             </details>
             <details>
               <summary>Functional safety management. Coordination and designing a change handling system. </summary>
-              <p>Coordinated departmental efforts to meet system requirements. 
+              <p class="cv-details">Coordinated departmental efforts to meet system requirements. 
                 Created a C# program to calculate short-circuit hazards in vehicles based on variaty of research papers.
                 Designed a SharePoint-based document handling system.
               </p>
             </details>
             <details> 
               <summary>Skunk works, feasibility study of an idea. </summary>
-              <p>Did a feasibility study of a novel safety feature, that originated from the 60ies and involved rockets. 
+              <p class="cv-details">Did a feasibility study of a novel safety feature, that originated from the 60ies and involved rockets. 
                 An idea that already exists in military technology. </p>
             </details>
             
-          </ul>
-          <details> 
-            <u><strong>Technologies:</strong> SharePoint, C#/Excel, Python</u>
+          </div>
+          <details class="technologies">
+            <summary> 
+              <u><strong>Technologies:</strong> SharePoint, C#/Excel, Python</u>
+              
+            </summary> 
+            <ul><strong>UML:</strong> Unified Model Language for graphical system representation. </ul>
+            <ul><strong>C#:</strong> 
           </details>
         </div>
       </div>
@@ -333,7 +341,7 @@
           <ul>
             <li>Delivery of automation (SW & HW), planning, coordination, change management, functional safety mgmt</li>
             <li>FAT, SAT, commissioning, startup</li>
-            <li>Developed libraries for Oil&Gas (ABB 800xA REUSE) and PMS (Power Management System)</li>
+            <li>Developed libraries for Oil\&Gas (ABB 800xA REUSE) and PMS (Power Management System)</li>
             <li>Led auto-testing of PMS libraries, drastically improving test coverage & release speed</li>
           </ul>
           <p><strong>Technologies:</strong> ABB 800xA, REUSE Lib, Graphics editor, Contest, SharePoint/C#</p>

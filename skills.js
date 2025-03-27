@@ -321,8 +321,7 @@ const skillCategories = [
   
         // Toggle the display of the sub-skills container when clicking the header
         skillHeader.addEventListener('click', function() {
-          subSkillsContainer.style.display = (subSkillsContainer.style.display === 'none' || subSkillsContainer.style.display === '') 
-            ? 'block' 
+          subSkillsContainer.style.display = (subSkillsContainer.style.display === 'none' || subSkillsContainer.style.display === '') ? 'block' 
             : 'none';
         });
 

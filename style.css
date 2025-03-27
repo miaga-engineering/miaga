@@ -1,3 +1,27 @@
+/* Dark mode support */
+:root {
+  --bg-color: #f5f5f5;
+  --text-color: #444;
+  --container-bg: #fff;
+  --left-column-bg: #fafafa;
+  --header-bg: #464646;
+  --header-text: #ffffff;
+  --border-color: #0064c8;
+  --skill-header-bg: #f7f7f7;
+  --company-name-color: #0064c8;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --container-bg: #2d2d2d;
+  --left-column-bg: #252525;
+  --header-bg: #1f1f1f;
+  --header-text: #ffffff;
+  --border-color: #0064c8;
+  --skill-header-bg: #333333;
+  --company-name-color: #2975c0;
+}
 
 /* Basic resets and fonts */
 * {
@@ -7,10 +31,11 @@
   font-family: 'Raleway', sans-serif;
 }
 body {
-  background-color: #f5f5f5;
-  color: #444;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.4;
   font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
 }
 a {
   text-decoration: none;
@@ -22,12 +47,14 @@ a {
   flex-direction: row; 
   max-width: 1200px; 
   margin: 20px auto; 
-  background-color: #fff;
+  background-color: var(--container-bg);
+  transition: background-color 0.3s;
 }
 .left-column {
   width: 30%; 
   padding: 20px; 
-  background-color: #fafafa;
+  background-color: var(--left-column-bg);
+  transition: background-color 0.3s;
 }
 .right-column {
   width: 70%; 
@@ -35,11 +62,12 @@ a {
 }
 /* Header / Title block */
 .header-block {
-  background-color: #464646; 
-  color: #ffffff; 
+  background-color: var(--header-bg);
+  color: var(--header-text);
   text-align: center; 
   padding: 30px 10px;
   margin-bottom: 20px;
+  transition: background-color 0.3s;
 }
 .header-block h1 {
   font-size: 2em;
@@ -54,8 +82,8 @@ a {
 .section-title {
   font-size: 1.3em; 
   text-transform: uppercase; 
-  color: #464646;
-  border-bottom: 2px solid #0064c8;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
   margin: 1.2em 0 0.5em 0;
   font-weight: 600;
 }
@@ -73,11 +101,9 @@ a {
 
 .skill-header {
   padding: 0.5em;
-  background-color: #f7f7f7;
-  /*display: flex;*/
+  background-color: var(--skill-header-bg);
   align-items: center;
-  /*display: inline-block;
-  white-space: nowrap; /* Prevent wrapping */
+  transition: background-color 0.3s;
 }
 .skill-header.clickable {
   cursor: pointer;
@@ -185,24 +211,25 @@ a {
 .cvevent-header .position {
   font-weight: 700; 
   font-size: 1em;
-  color: #333;
+  color: var(--text-color);
+  
 }
 .cvevent-header .timeframe {
   background-color: #0064c8; 
-  color: #fff;
+  color: #e0e0e0;
   font-size: 0.9em;
   padding: 2px 8px; 
   border-radius: 3px;
 }
 .cvevent-company {
-  color: #0064c8;
+  color: var(--company-name-color);
   font-weight: 600;
   margin-top: 4px;
 }
 .cvevent-description {
   margin-top: 8px;
   font-size: 0.95em;
-  color: #333;
+  color: var(--text-color);
 }
 .cvevent ul {
   list-style: disc inside;
@@ -247,7 +274,9 @@ details summary {
   position: relative;
   padding-left: 1.5em;
   margin: 0.5em 0;
-  margin-bottom: 0em; 
+  margin-left: 1.0em;
+  margin-bottom: 0; 
+  color: var(--text-color);
 }
 
 details summary::-webkit-details-marker {
@@ -260,7 +289,7 @@ details summary::marker {
 details summary::before {
   content: '+';
   position: absolute;
-  left: -0em;
+  left: -0;
   font-weight: bold;
   color: #0064c8;
 }
@@ -269,14 +298,41 @@ details[open] summary::before {
 }
 details p {
   margin-left: 2em;
-  color: rgb(68, 68, 68);
+  color: var(--text-color);
   font-style: italic;
   margin-bottom: 1em;
 }
 details ul {
-  margin-left: 2.5em  !important;
+  margin-left: 2.5em;
   font-style: italic;
 }
+
+.cv-details {
+  margin-left: 3.0em;
+  margin-right: 3.0em;
+  color: var(--text-color);
+}
+
+.cv-details ul,
+ul.cv-details {
+  list-style-type: disc;
+  margin-left: 4.5em;
+  margin-right: 3.0em;
+  color: var(--text-color);
+}
+
+.cv-details li {
+  margin-bottom: 0.5em;
+}
+
+.technologies {
+  margin-left: -1em;
+}
+
+.technologies ul {
+  margin-left: 3.5em; /* Adjust the value as needed */
+}
+
 
 .toggle-indicator {
   font-weight: bold;
@@ -305,3 +361,27 @@ details ul {
     display: none;
   }
 }*/
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--container-bg);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+#themeToggle:hover {
+  transform: scale(1.1);
+}
