@@ -39,9 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const uElement = summaryEl.querySelector('u');
       const indicator = document.createElement('span');
       indicator.classList.add('toggle-indicator');
-      // Insert a blue plus sign
+      // Insert plus sign
       indicator.textContent = '+ ';
-      indicator.style.color = 'blue';
+      // Use CSS variable for color
+      indicator.style.color = 'var(--company-name-color)';
       indicator.style.cursor = 'pointer';
   
       // Insert the indicator before the <u> element (so it appears before "Summary:")

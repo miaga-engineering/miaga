@@ -20,7 +20,7 @@
   --header-text: #ffffff;
   --border-color: #0064c8;
   --skill-header-bg: #333333;
-  --company-name-color: #2975c0;
+  --company-name-color: #b4b9be;
 }
 
 /* Basic resets and fonts */
@@ -217,16 +217,18 @@ a {
 .cvevent-header .timeframe {
   background-color: #0064c8; 
   color: #e0e0e0;
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 2px 8px; 
   border-radius: 3px;
 }
 .cvevent-company {
   color: var(--company-name-color);
   font-weight: 600;
-  margin-top: 4px;
+  font-size: 1.1em;
+  margin-top: 4px;  
 }
 .cvevent-description {
+  /*content: '+';*/
   margin-top: 8px;
   font-size: 0.95em;
   color: var(--text-color);
@@ -236,6 +238,12 @@ a {
   margin-left: 20px;
   margin-top: 6px;
 }
+
+/* Summary styling */
+.cvevent-summary {
+  margin-bottom: 10px;
+}
+
 /* Education / Meta events */
 .meta-event {
   margin-bottom: 16px;
@@ -252,7 +260,7 @@ a {
 }
 .meta-institution {
   font-size: 0.9em;
-  color: #666;
+  color: #777;
   margin-bottom: 4px;
 }
 .meta-description {
@@ -268,7 +276,7 @@ a {
   color: #0064c8;
   margin-right: 6px;
 }
-details summary {
+/*details summary {
   list-style: none;
   cursor: pointer;
   position: relative;
@@ -277,25 +285,39 @@ details summary {
   margin-left: 1.0em;
   margin-bottom: 0; 
   color: var(--text-color);
+}*/
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.8em;
+  margin: 0.5em 0 0 1em;
+  color: var(--text-color);
 }
 
-details summary::-webkit-details-marker {
-  display: none;
-}
-
+details summary::-webkit-details-marker,
 details summary::marker {
   display: none;
 }
 details summary::before {
   content: '+';
   position: absolute;
-  left: -0;
+  left: 0;
   font-weight: bold;
-  color: #0064c8;
+  color: var(--company-name-color);
+  transition: color 0.3s;
 }
+
 details[open] summary::before {
   content: "-";
 }
+
+details summary::-webkit-details-marker,
+details summary::marker {
+  display: none;
+}
+
 details p {
   margin-left: 2em;
   color: var(--text-color);
