@@ -15,8 +15,8 @@
     <script src="cvevents.js"></script>
   <!-- Header / Title block -->
   <div class="header-block">
-    <h1>MICHAEL KWAPISZ2</h1>
-    <div class="subtitle">2Versatile broad spectrum problem solver</div>
+    <h1>MICHAEL KWAPISZ</h1>
+    <div class="subtitle">Versatile broad spectrum problem solver</div>
   </div>
 
   <!-- Main container (two columns) -->
@@ -255,7 +255,7 @@
             <details>
               <summary>Developing, implementing, commissioning non-linear MPC for Polyolefin plants</summary>
               <p class="cv-details">Developing Borealis's proprietary Model Predictive Controller(Onspot). 
-                Implementing controller for polypropylene plants and commissioning them.
+                Implementing controller for polypropylene plants and commissioning them. Development was mainly conducted in FORTRAN.
               </p>
             </details>
             <details>
@@ -263,17 +263,18 @@
               <p class="cv-details">Executed a project to speed up Onspot by implementing parallelization, fortran openMP. 
                 This project involved external experts and was partly funded by the EU. 
                 The efforts resulted in a 30% speed up and was particularly important for LDPE(Low Density Poly-Ethylene) plants where models are relatively large.
-                Another use case was for simulating detail kinetics where execution time for one cycle could take 30 minutes.    
+                Another use case was for simulating detail kinetics where execution time for one cycle could take up to 30 minutes.    
               </p>
             </details>
             <details>
               <summary>System identification, PID loop tuning, advanced process control loops</summary>
-              <p class="cv-details">Identifying simple systems using internal identification and tuning tools. Loop tuning using previously mentioned tools, 
+              <p class="cv-details">Identifying simple systems using internal identification and tuning tools. Loop tuning was done using Borealis internal tuning software developed by Nick Alsop. 
                 Ensuring control loop performance and proper frequency separation to related control loops. 
                 Design of advanced regulatory controllers, everything more advanced than a cascade controller. 
                 One project was to implement an advanced filter which would compensate for control actuator dynamics and delays. Successfully managed to reduce temperature oscillations from 2°C to 0.15°C. 
                 This improvement allowed for improved stability of of the plant and resulted in 97% reduction in operator intervention, 
-                allowing them to pay attention to other parts of the plant.   
+                allowing them to pay attention to other parts of the plant. 
+                The feasibility study for this particular project was mainly done using simulink for simple linear simulations and Python/Scipy for process simulation.    
               </p>
             </details>
             <details> 
@@ -286,10 +287,12 @@
             <summary>
               <u><strong>Technologies:</strong></u> Fortran + OpenMP, Python (simulation, automation, SciPy, Keras), SQL, Matlab/Simulink
             </summary>
-            <ul><strong>Fortran</strong> Implemented parallelized MPC, using openMP(High Performance Computing) to reduce execution time which allowed for expansion of model complexity.</ul>
+            <ul><strong>Onspot</strong> Borealis's proprietary non-linear Model Predictive Control (MPC) used for Borealis's Borstar process. </ul>
+            <ul><strong>Fortran</strong> Implemented parallelized MPC(Onspot), using openMP(High Performance Computing) to reduce execution time which allowed for expansion of model complexity.</ul>
             <ul><strong>Python</strong> Created Python framework for templating above mentioned implementation, cutting total project time significantly.</ul>
             <ul><strong>Python</strong> Scipy, used for simulations of mainly heat loops in both loop reactors and Gas-Phase-Reactors.</ul>
-            <ul><strong>Matlab</strong> Simuling, used for linear system simulations.</ul>
+            <ul><strong>Matlab</strong> Simulink, used for linear system simulations.</ul>
+            <ul><strong>DMC+</strong> Aspentech DMC+, used for controlling larger processes like cracker units where linear controllers where more suitable.</ul>
           </details>
         </div>
       </div>
@@ -330,9 +333,9 @@
               <u><strong>Technologies:</strong></u> SharePoint, C#/Excel, Python
               
             </summary> 
-            <ul><strong>UML:</strong> Unified Model Language for graphical system representation. </ul>
-            <ul><strong>C#:</strong> Macro development for Excel.</ul>
-            <ul><strong>Python:</strong> Scipy, for feasibility calculations.</ul>
+              <ul><strong>UML:</strong> Unified Model Language for graphical system representation. </ul>
+              <ul><strong>C#:</strong> Macro development for Excel.</ul>
+              <ul><strong>Python:</strong> Scipy, for feasibility calculations.</ul>
           </details>
         </div>
       </div>
