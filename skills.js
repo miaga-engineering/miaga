@@ -311,7 +311,7 @@ const skillCategories = [
           subSkillBarFill.className = 'skill-bar-fill';
           subSkillBarFill.style.width = sub.percentage + '%';
           // For a slightly transparent background color, e.g.:
-          subSkillBarFill.style.backgroundColor = 'rgba(0,100,200,0.4)';
+          subSkillBarFill.style.backgroundColor = 'var(--skill-bar-fill-color)';
           subSkillBar.appendChild(subSkillBarFill);
           subSkillItem.appendChild(subSkillBar);
   
