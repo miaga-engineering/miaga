@@ -52,15 +52,18 @@
           <form
             action="https://formspree.io/f/xovdgzbe"
             method="POST"
->
-          <label>
-            Your email:
-          <input type="email" name="email">
-          </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
+>         <div class="form-group">
+            <label for="emailForm">
+              Your email:
+            <input type="emailForm" name="email" required>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="message">
+              Your message:
+              <textarea if="message" name="message" required></textarea>
+            </label>
+          </div>
             <!-- your other form fields go here -->
             <button type="submit">Send</button>
           </form>

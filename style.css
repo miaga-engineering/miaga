@@ -413,3 +413,25 @@ ul.cv-details {
 #themeToggle:hover {
   transform: scale(1.1);
 }
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
