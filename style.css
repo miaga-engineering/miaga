@@ -386,7 +386,7 @@ ul.cv-details {
 
 @media screen {
   .print-only {
-    display: none;
+    display: block !important;
   }
 }*/
 
