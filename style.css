@@ -384,11 +384,11 @@ ul.cv-details {
   }
 }
 
-@media screen {
+/*@media screen {
   .print-only {
     display: block !important;
   }
-}*/
+}*/*/
 
 /* Theme toggle button */
 .theme-toggle {
